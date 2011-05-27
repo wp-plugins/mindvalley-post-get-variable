@@ -20,7 +20,7 @@ Example:
 [post_var name='email']
 or
 [get_var name='txn_id']
-
+ 
 
 
 == Installation ==
