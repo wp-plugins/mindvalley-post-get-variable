@@ -3,7 +3,7 @@
 Plugin Name: Mindvalley Post & Get Variables
 Description: Lets you output a POST or GET variable in the page via shortcode.
 Author: MindValley
-Version: 1.0
+Version: 1.0.1
 */
 
 /*

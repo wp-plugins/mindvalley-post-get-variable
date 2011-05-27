@@ -4,7 +4,7 @@ Donate link: http://www.mindvalley.com/opensource
 Tags: pagemash, page, management
 Requires at least: 3.0.0
 Tested up to: 3.1.3
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 Lets you output a POST or GET variable in the page via shortcode.
 
@@ -18,9 +18,7 @@ Super duper uberly useful on tracking scripts on eCommerce thank you pages.
 Example:
 
 [post_var name='email']
-
 or
-
 [get_var name='txn_id']
 
 
