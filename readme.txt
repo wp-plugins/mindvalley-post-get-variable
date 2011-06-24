@@ -4,7 +4,7 @@ Donate link: http://www.mindvalley.com/opensource
 Tags: pagemash, page, management
 Requires at least: 3.0.0
 Tested up to: 3.1.3
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 Lets you output a POST or GET variable in the page via shortcode.
 
@@ -17,10 +17,15 @@ Super duper uberly useful on tracking scripts on eCommerce thank you pages.
 
 Example:
 
-[post_var name='email']
-or
-[get_var name='txn_id']
- 
+$_POST['email'] > [post_var name='email']
+$_GET['txn_id'] > [get_var name='txn_id']
+
+For Array values :
+
+$_POST['user']['email'] > [post_var] name=search[user][email] [/post_var]
+$_GET['user']['first_name'] > [get_var] name=search[user][first_name] [/get_var]
+$_GET['user']['last_name'] > [get_var] name=search[user][last_name] [/get_var]
+
 
 
 == Installation ==
@@ -35,3 +40,15 @@ or
 = Why I can't get some of the URL variables? =
 
 WordPress has a set of reserved GET variables that is used for page querying. For example, 'name' or 'page_id' or 'id' can't be used without having some unexpected results.
+
+
+
+== Changelog ==
+
+= 1.0 =
+Initial Release.
+
+
+= 1.0.2 =
+Add support for array $_POST / $_GET variables
+
