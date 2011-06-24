@@ -17,14 +17,14 @@ Super duper uberly useful on tracking scripts on eCommerce thank you pages.
 
 Example:
 
-$_POST['email'] > [post_var name='email']
-$_GET['txn_id'] > [get_var name='txn_id']
+* $_POST['email'] > [post_var name='email']
+* $_GET['txn_id'] > [get_var name='txn_id']
 
 For Array values :
 
-$_POST['user']['email'] > [post_var] name=search[user][email] [/post_var]
-$_GET['user']['first_name'] > [get_var] name=search[user][first_name] [/get_var]
-$_GET['user']['last_name'] > [get_var] name=search[user][last_name] [/get_var]
+* $_POST['user']['email'] > [post_var] name=search[user][email] [/post_var]
+* $_GET['user']['first_name'] > [get_var] name=search[user][first_name] [/get_var]
+* $_GET['user']['last_name'] > [get_var] name=search[user][last_name] [/get_var]
 
 
 
