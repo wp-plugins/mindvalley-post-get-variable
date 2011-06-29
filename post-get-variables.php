@@ -3,7 +3,7 @@
 Plugin Name: Mindvalley Post & Get Variables
 Description: Lets you output a POST or GET variable in the page via shortcode.
 Author: Mindvalley
-Version: 1.0.3
+Version: 1.0.4
 */
 
 /*
@@ -37,7 +37,7 @@ Class MV_Post_Get_Variables {
         add_shortcode('get_var', array(&$this,'get_var'));
     }
     
-    function post_var($atts){
+    function post_var($atts,$content){
         if(!is_array($atts)){
 			$atts = array();
 		}
