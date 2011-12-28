@@ -4,7 +4,7 @@ Donate link: http://www.mindvalley.com/opensource
 Tags: post, get, variables
 Requires at least: 3.0.0
 Tested up to: 3.1.3
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 
 Lets you output a POST or GET variable in the page via shortcode.
 
@@ -65,6 +65,6 @@ Additional checks to avoid unnecessary PHP warnings if the key provided appears 
 Bug fix.
 
 
-= 1.0.5 =
+= 1.0.6 =
 Support PHP auto replacements POST / GET variables with underscores
 

@@ -3,7 +3,7 @@
 Plugin Name: Mindvalley Post & Get Variables
 Description: Lets you output a POST or GET variable in the page via shortcode.
 Author: Mindvalley
-Version: 1.0.5
+Version: 1.0.6
 */
 
 /*
@@ -93,7 +93,7 @@ Class MV_Post_Get_Variables {
 	
 		// Accomodate for PHP auto replace with underscore
 		$key = str_replace($replacements,'_',urldecode($atts['name']));
-		
+
 		// Array Key
 		if($pos = strpos($key,'[')){
 			$basekey = substr($key,0,$pos);
@@ -116,13 +116,64 @@ Class MV_Post_Get_Variables {
 		}
 		$atts = $this->convert_block_to_params($atts,$content);
 		$key = $atts['name'];
-		
+
+		/** 
+		 * 	PHP Auto Replacements 
+		 * 	http://www.php.net/manual/en/language.variables.external.php#81080
+		 * 	
+		 * 	chr(32) ( ) (space)
+		 * 	chr(46) (.) (dot)
+		 * 	chr(91) ([) (open square bracket)
+		 * 	chr(128) - chr(159) (various)
+		 * 	
+		 */
+
+		$replacements = array();
+		$replacements[] = chr(32);
+		$replacements[] = chr(46);
+		$replacements[] = chr(91);
+		$replacements[] = chr(128);
+		$replacements[] = chr(129);
+		$replacements[] = chr(130);
+		$replacements[] = chr(131);
+		$replacements[] = chr(132);
+		$replacements[] = chr(133);
+		$replacements[] = chr(134);
+		$replacements[] = chr(135);
+		$replacements[] = chr(136);
+		$replacements[] = chr(137);
+		$replacements[] = chr(138);
+		$replacements[] = chr(139);
+		$replacements[] = chr(140);
+		$replacements[] = chr(141);
+		$replacements[] = chr(142);
+		$replacements[] = chr(143);
+		$replacements[] = chr(144);
+		$replacements[] = chr(145);
+		$replacements[] = chr(146);
+		$replacements[] = chr(147);
+		$replacements[] = chr(148);
+		$replacements[] = chr(149);
+		$replacements[] = chr(140);
+		$replacements[] = chr(151);
+		$replacements[] = chr(152);
+		$replacements[] = chr(153);
+		$replacements[] = chr(154);
+		$replacements[] = chr(155);
+		$replacements[] = chr(156);
+		$replacements[] = chr(157);
+		$replacements[] = chr(158);
+		$replacements[] = chr(159);
+	
+		// Accomodate for PHP auto replace with underscore
+		$key = str_replace($replacements,'_',urldecode($atts['name']));
+				
 		// Array Key
 		if($pos = strpos($key,'[')){
 			$basekey = substr($key,0,$pos);
 			$remainder = substr($key,$pos);
 			
-			eval('$value = $_GET[' . $basekey . ']' . $remainder . ';');
+			eval('$value = $_GET["' . $basekey . '"]' . $remainder . ';');
 		}else{
 			$value = $_GET[$key];
 		}
