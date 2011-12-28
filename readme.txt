@@ -22,9 +22,9 @@ Example:
 
 For Array values :
 
-* $_POST['user']['email'] > [post_var] name="search[user][email]" [/post_var]
-* $_GET['user']['first_name'] > [get_var] name="search[user][first_name]" [/get_var]
-* $_GET['user']['last_name'] > [get_var] name="search[user][last_name]" [/get_var]
+* $_POST['user']['email'] > [post_var] name="user[email]" [/post_var]
+* $_GET['user']['first_name'] > [get_var] name="user[first_name]" [/get_var]
+* $_GET['user']['address']['line1'] > [get_var] name="user[address][line1]" [/get_var]
 
 Note: Remember to wrap the name attribute in double quotes (").
 
